@@ -1,0 +1,59 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+        <title>PG Enrollment Prediction</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h2>PG Enrollment Prediction</h2>
+        <h3>Using Random Forest Classifier</h3>
+        <form action="calculate">
+            <div class="user-box">
+                <label>Prefer Working</label>
+                <select name="pw">
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
+            </div>
+            <div class="user-box">
+                <label>Financial Constraint</label>
+                <select name="fc">
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
+            </div>
+            <div class="user-box">
+                <label>Family Issues</label>
+                <select name="fi">
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
+            </div>
+            <div class="user-box">
+                <label>Study Abroad</label>
+                <select name="jc">
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
+            </div>
+            <div class="user-box">
+                <label>Health Issues</label>
+                <select name="hi">
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
+            </div>
+            <!-- </div> -->
+            <div class="form_submit">
+				<input type="submit" name="submit" value="predict" class="submitbtn" />
+			</div>
+        </form><br>
+        <h2>Will Continue PG ? : {{predicted}}</h2>
+    </div>
+</body>
+
+</html>
